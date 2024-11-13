@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Privado</title>
+  <style>
+    #chat-box { max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    #chat-box p { margin: 5px 0; }
+    input[type="text"] { width: 80%; padding: 5px; }
+    button { padding: 5px 10px; }
+  </style>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+  <div>
+    <label for="room-input">ID da Sala:</label>
+    <input id="room-input" type="text" placeholder="Digite o ID da Sala">
+    <button onclick="joinRoom()">Entrar na Sala</button>
+  </div>
+
+  <div id="chat-box"></div>
+  <input id="message-input" type="text" placeholder="Digite sua mensagem">
+  <button onclick="sendMessage()">Enviar</button>
+
+  <script>
+    const socket = io(); // Conecta ao servidor
+    let currentRoom = null;
+
+    // Função para entrar em uma sala privada
+    function joinRoom() {
+      const roomInput = document.getElementById('room-input');
+      currentRoom = roomInput.value;
+      if (currentRoom) {
+        socket.emit('join room', currentRoom);
+        console.log(`Conectado à sala: ${currentRoom}`);
+        roomInput.disabled = true; // Desativa o campo de sala para evitar mudanças
+      }
+    }
+
+    // Receber mensagem e exibir no chat
+    socket.on('private message', (msg) => {
+      const chatBox = document.getElementById('chat-box');
+      const messageElement = document.createElement('p');
+      messageElement.textContent = msg;
+      chatBox.appendChild(messageElement);
+      chatBox.scrollTop = chatBox.scrollHeight; // Rola para a última mensagem
+    });
+
+    // Enviar mensagem para a sala privada
+    function sendMessage() {
+      const input = document.getElementById('message-input');
+      const message = input.value;
+      if (message.trim() && currentRoom) {
+        socket.emit('private message', { roomID: currentRoom, message });
+        input.value = '';
+      }
+    }
+  </script>
+</body>
+</html>

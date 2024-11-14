@@ -82,21 +82,21 @@ i {
     height: 70%;
     width: 85%;
     border-radius: 0px 7px 7px 0px;
-    border: solid 2px black;
+    border: solid 2px #83818171;
     background-color: #83818171;
 }
 
 .voltaChat {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .divChatMensagens {
-    height: 80%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     overflow-x: auto;
     padding: 7px; 
     background-color: #fff;

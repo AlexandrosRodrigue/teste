@@ -11,12 +11,13 @@ body {
 }
 
 .header {
-    height: 20%;
+    height: 15%;
     width: 100%;
     display: flex;
     background-color: #1976d2;
     align-items: center;
     z-index: 10;
+    border-radius: 7px;
     box-shadow: 
         0 2px 4px -1px rgba(0, 0, 0, .2),
         0 4px 4px 0px rgba(0, 0, 0, .14),
@@ -38,7 +39,7 @@ body {
 
 .texto {
     color: #fff;
-    font-size: 2.8rem;
+    font-size: 1.7rem;
 }
 
 .right {
@@ -51,15 +52,15 @@ body {
 
 .inputIDsala {
     width: 35%;
-    height: 20%;
+    height: 35%;
     border-radius: 7px;
     border: none;
 }
 
 .btnConfirmar {
-    margin-left: 3px;
+    margin-left: 5px;
     border-radius: 7px;
-    background-color: blue;
+    background-color: rgb(121, 121, 141);
     color: #fff;
 }
 
@@ -75,6 +76,7 @@ i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #83818171;
 }
 
 .divChatMensagens {
@@ -82,6 +84,7 @@ i {
     width: 90%;
     overflow-x: auto;
     padding: 7px; 
+    background-color: #fff;
 }
 
 .footerChat {
@@ -90,11 +93,12 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
 }
 
 .inputEscreverMensagem {
     height: 40%;
     width: 60%;
     border-radius: 7px;
-    border: none;
+    border: solid 1px black;
 }

@@ -99,8 +99,8 @@ i {
 }
 
 .divChatMensagens {
-    height: 90%;
-    width: 90%;
+    height: 85%;
+    width: 95%;
     overflow-x: auto;
     padding: 7px; 
     background-color: #fff;

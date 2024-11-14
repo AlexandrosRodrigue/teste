@@ -15,6 +15,10 @@ html {
 .container {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
@@ -79,6 +83,7 @@ i {
     height: 70%;
     width: 85%;
     border-radius: 7px;
+    border: solid 2px #83818171;;
     background-color: #83818171;
 }
 

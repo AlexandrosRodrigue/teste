@@ -44,7 +44,7 @@ html {
 
 .imgLogo420 {
     height: 90%;
-    width: 93%;
+    width: 70%;
 }
 
 .imgLogo {
@@ -70,8 +70,8 @@ html {
     height: 40%;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .cima-meio label {
@@ -116,7 +116,7 @@ html {
     align-items: center;
     justify-content: center;
     border: solid 3px  rgb(6, 145, 40);
-    background-image: url('https://www.google.com/imgres?q=420&imgurl=https%3A%2F%2Fwww.flight2vegas.com%2Fcdn%2Fshop%2Ffiles%2Fwhat-is-420-friendly-landscape.png%3Fv%3D1709627391&imgrefurl=https%3A%2F%2Fwww.flight2vegas.com%2Fblogs%2Fnews-1%2Fwhat-is-420-friendly&docid=YOG1jcEw_x_qQM&tbnid=7W9ClndiJJD9CM&vet=12ahUKEwiP8_P5rdyJAxUpqZUCHa3YGDEQM3oECCEQAA..i&w=1800&h=1000&hcb=2&ved=2ahUKEwiP8_P5rdyJAxUpqZUCHa3YGDEQM3oECCEQAA');
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.grupobz.com.br%2Fcuriosidades-sobre-o-por-do-sol-a-beleza-especial-do-outono%2F&psig=AOvVaw0BgkuGQ8DDQ2Ycw0hnZC_V&ust=1731697460497000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjkzfHB3IkDFQAAAAAdAAAAABAE');
 }
 
 .voltaChat {

@@ -3,24 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Chat Privado</title>
-  <style>
-    #chat-box { max-height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-    #chat-box p { margin: 5px 0; }
-    input[type="text"] { width: 80%; padding: 5px; }
-    button { padding: 5px 10px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 </head>
 <body>
-  <div>
-    <label for="room-input">ID da Sala:</label>
-    <input id="room-input" type="text" placeholder="Digite o ID da Sala">
-    <button onclick="joinRoom()">Entrar na Sala</button>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img class="imgLogo" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogodetimes.com%2Fchelsea-football-club%2F&psig=AOvVaw3OinjNk3tqEdiAjlqyf2ZZ&ust=1731669799193000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMDA9eza24kDFQAAAAAdAAAAABAE" alt="CHELSEA">
+        <h2 class="texto">Chat Chelsea</h2>
+      </div>
+      <div class="right">
+        <input class="inputIDsala" id="room-input" type="text" placeholder="Digite o ID da Sala">
+        <button class="btnConfirmar" onclick="joinRoom()"><i class="fa-solid fa-check"></i></button>      
+      </div>
+    </div>
+    <div class="contentChat">
+      <div id="chat-box" class="divChatMensagens"></div>
+      <div class="footerChat">
+        <input id="message-input" type="text" placeholder="Digite sua mensagem" class="inputEscreverMensagem">
+        <button class="btnConfirmar" onclick="sendMessage()"><i class="fa-solid fa-check"></i></button>
+      </div>
+    </div>
   </div>
-
-  <div id="chat-box"></div>
-  <input id="message-input" type="text" placeholder="Digite sua mensagem">
-  <button onclick="sendMessage()">Enviar</button>
 
   <script>
     const socket = io('https://backendteste-ml45.onrender.com'); // Conecta ao servidor

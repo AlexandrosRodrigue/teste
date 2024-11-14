@@ -1,0 +1,100 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    background-color: #1976d2;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 
+        0 2px 4px -1px rgba(0, 0, 0, .2),
+        0 4px 4px 0px rgba(0, 0, 0, .14),
+        0 1px 10px 0px rgba(0, 0, 0, .12);    
+}
+
+.logo {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLogo {
+    height: 80%;
+    width: 80%;
+}
+
+.texto {
+    color: #fff;
+    font-size: 2.8rem;
+}
+
+.right {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputIDsala {
+    width: 35%;
+    height: 20%;
+    border-radius: 7px;
+    border: none;
+}
+
+.btnConfirmar {
+    margin-left: 3px;
+    border-radius: 7px;
+    background-color: blue;
+    color: #fff;
+}
+
+i {
+    font-size: 1.3rem;
+}
+
+.contentChat {
+    height: 70%;
+    width: 85%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.divChatMensagens {
+    height: 80%;
+    width: 90%;
+    overflow-x: auto;
+    padding: 7px; 
+}
+
+.footerChat {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputEscreverMensagem {
+    height: 40%;
+    width: 60%;
+    border-radius: 7px;
+    border: none;
+}

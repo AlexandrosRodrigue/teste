@@ -79,11 +79,15 @@ i {
     height: 70%;
     width: 85%;
     border-radius: 7px;
+    background-color: #83818171;
+}
+
+.voltaChat {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #83818171;
 }
 
 .divChatMensagens {
@@ -92,6 +96,7 @@ i {
     overflow-x: auto;
     padding: 7px; 
     background-color: #fff;
+    border-radius: 7px;
 }
 
 .footerChat {
